@@ -5,6 +5,12 @@
 
 Developed in C using Raylib.
 
+Known Issues:
+In Stage 2:
+- Few Monkeys comes floating (different y level than others) with hitboxes.
+- Monkey spawning frequency and grouping control is still in initial stages.
+- Blue Monkey doesn't have any walking animation.
+
 For Windows - simply execute the shortcut.
 For Linux - Below.
 
