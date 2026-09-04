@@ -67,7 +67,7 @@ Includes fully playable **Stage 1 (Fire Rings)** and an in-progress **Stage 2 (T
 ---
 
 <div align="center">
-<sub>**Disclaimer:** *This is a free, open-source, and non-commercial educational project built strictly for learning C programming and the Raylib framework. "Circus Charlie", its characters, audio, and visual assets are the intellectual property of Konami. No copyright infringement is intended.*</sub>
+<sub>Disclaimer: This is a free, open-source, and non-commercial educational project built strictly for learning C programming and the Raylib framework. "Circus Charlie", its characters, audio, and visual assets are the intellectual property of Konami. No copyright infringement is intended.</sub>
 </div>
 
 ---
