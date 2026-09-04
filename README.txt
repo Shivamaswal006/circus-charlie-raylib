@@ -3,7 +3,28 @@
            CIRCUS CHARLIE (NES INSPIRED)
 ==================================================
 
-Developed in C using Raylib.
+A modern 16:9 widescreen remake of the 1984 arcade classic **Circus Charlie**, written in **C** using the **Raylib** library. 
+
+Includes fully playable Stage 1 (Fire Rings) and Stage 2 (Tightrope Monkeys) (unfinished) with both Normal and Endless arcade modes.
+
+---
+
+## 🎮 Gameplay Features
+- **Stage 1: Lion & Fire Rings** — Precision jumping through short and long fire hoops with bonus bags.
+- **Stage 2: Tightrope Walking** — Tightrope physics featuring fast-moving Blue Monkeys with jump AI and slow Brown Monkeys.
+- **Game Modes:** Classic Normal Mode with distance countdown & bonus tally, plus Endless Survival modes.
+- **Audio & SFX:** Full 8-bit arcade soundtrack and sound effects using Raylib's audio streaming pipeline.
+
+---
+
+## 🛠️ Technical Highlights
+- **Aspect Ratio Preservation:** Internal virtual canvas rendered at $426 \times 240$ and dynamically scaled to native monitor resolution with pillarboxing.
+- **Object Pooling:** Obstacles (rings, pots, monkeys) are recycled and randomized off-screen to avoid continuous memory reallocation.
+- **Kinematic Physics:** Custom gravity and vertical velocity simulation for player and AI jumping arcs.
+- **Parallax Background:** Dual-speed scrolling engine to simulate 2.5D visual depth.
+- **Tight Hitboxes:** Custom Axis-Aligned Bounding Boxes (AABB) configured specifically to ignore sprite transparency.
+
+---
 
 Known Issues:
 In Stage 2:
@@ -11,36 +32,8 @@ In Stage 2:
 - Monkey spawning frequency and grouping control is still in initial stages.
 - Blue Monkey doesn't have any walking animation.
 
-For Windows - simply execute the shortcut.
-For Linux - Below.
-
 --------------------------------------------------
-1. PREREQUISITES (INSTALL RAYLIB ON LINUX) (Automatically done by running ./build.sh)
---------------------------------------------------
-Before compiling, ensure you have GCC and Raylib installed.
-
-On Ubuntu / Debian / Linux Mint / Pop!_OS:
-  sudo apt update
-  sudo apt install libraylib-dev gcc
-
-On Arch Linux / Manjaro:
-  sudo pacman -S raylib gcc
-
-On Fedora:
-  sudo dnf install raylib-devel gcc
-
---------------------------------------------------
-2. HOW TO BUILD & RUN
---------------------------------------------------
-Open your terminal inside this src folder and run:
-
-  ./build.sh
-
-Then start the game with:
-  ./main
-
---------------------------------------------------
-3. CONTROLS
+           CONTROLS
 --------------------------------------------------
   * Left / Right Arrow: Move Clown/Lion
   * Spacebar or Up Arrow:   Jump
