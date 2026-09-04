@@ -1,6 +1,8 @@
 <div align="center">
 
-# 🎪 Circus Charlie (NES Inspired)
+# 🎪 Circus Charlie (NES)
+
+Made with architectural assistance from AI during my basics of C classes. I went through and heavily commented the codebase to understand the mechanics.
 
 **A modern 16:9 widescreen remake of the 1984 arcade classic written in C using Raylib.**
 
@@ -59,7 +61,7 @@ Includes fully playable **Stage 1 (Fire Rings)** and an in-progress **Stage 2 (T
 ---
 
 <div align="center">
-<sub>Enjoy the game! Built as an exploratory systems & game loops project.</sub>
+<sub>Enjoy the game! Built as an exploratory systems & understanding basics of C.</sub>
 </div>
 
 ---
