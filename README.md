@@ -50,12 +50,11 @@ Includes fully playable **Stage 1 (Fire Rings)** and an in-progress **Stage 2 (T
 
 ## 🐛 Known Issues & Roadmap
 
-> *Stage 2 is currently in active development.*
+> *Stage 2 is currently in unfinished.*
 
 - [ ] **Monkey Vertical Alignment:** Some monkeys occasionally spawn on varying Y levels on the rope.
 - [ ] **Spawn Clumping:** Spawn frequency and group pacing are still in early tuning stages.
 - [ ] **Blue Monkey Sprites:** Blue jumping monkeys currently lack a dedicated walking animation cycle.
-- [ ] **Upcoming:** Stage 3 (Ball Balancing).
 
 ---
 
