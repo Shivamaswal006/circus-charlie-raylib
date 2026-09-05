@@ -41,7 +41,7 @@ Includes fully playable **Stage 1 (Fire Rings)** and an in-progress **Stage 2 (T
 
 ## 🎮 Controls
 
-| Action | Controls |
+| Action | Key Bindings |
 | :--- | :--- |
 | **Move Clown / Lion** | <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> |
 | **Jump** | <kbd>Space</kbd> or <kbd>↑</kbd> <kbd>W</kbd> |
@@ -50,9 +50,52 @@ Includes fully playable **Stage 1 (Fire Rings)** and an in-progress **Stage 2 (T
 
 ---
 
+## 🚀 Getting Started
+
+### 🪟 Windows
+Simply execute `main.exe` directly inside the src folder.
+
+---
+
+### 🐧 Linux
+
+#### 1. Automated Build (Recommended)
+The included `build.sh` script will automatically detect missing libraries, install dependencies on Debian/Ubuntu systems, compile Raylib from source if needed, and build the binary:
+
+```bash
+chmod +x build.sh
+./build.sh
+./main
+```
+
+#### 2. Manual Prerequisites (If not using auto-installer)
+If you prefer installing dependencies manually using your distribution's package manager:
+
+* **Ubuntu / Debian / Linux Mint / Pop!_OS:**
+  ```bash
+  sudo apt update
+  sudo apt install -y libraylib-dev gcc
+  ```
+* **Arch Linux / Manjaro:**
+  ```bash
+  sudo pacman -S raylib gcc
+  ```
+* **Fedora:**
+  ```bash
+  sudo dnf install raylib-devel gcc
+  ```
+
+Once installed, compile manually:
+```bash
+gcc main.c -o main -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+./main
+```
+
+---
+
 ## 🐛 Known Issues & Roadmap
 
-> *Stage 2 is currently in unfinished.*
+> *Stage 2 is currently unfinished / work in progress.*
 
 - [ ] **Monkey Vertical Alignment:** Some monkeys occasionally spawn on varying Y levels on the rope.
 - [ ] **Spawn Clumping:** Spawn frequency and group pacing are still in early tuning stages.
@@ -61,13 +104,9 @@ Includes fully playable **Stage 1 (Fire Rings)** and an in-progress **Stage 2 (T
 ---
 
 <div align="center">
-<sub>Enjoy the game! Built as an exploratory systems & understanding basics of C.</sub>
-</div>
-
----
-
-<div align="center">
-<sub>Disclaimer: This is a free, open-source, and non-commercial educational project built strictly for learning C programming and the Raylib framework. "Circus Charlie", its characters, audio, and visual assets are the intellectual property of Konami. No copyright infringement is intended.</sub>
+<sub>Enjoy the game! Built as an exploratory system to understand low-level basics of C.</sub>
+<br/><br/>
+<sub><strong>Disclaimer:</strong> This is a free, open-source, and non-commercial educational project built strictly for learning C programming and the Raylib framework. "Circus Charlie", its characters, audio, and visual assets are the intellectual property of Konami. No copyright infringement is intended.</sub>
 </div>
 
 ---
