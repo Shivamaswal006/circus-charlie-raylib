@@ -72,6 +72,7 @@ void EndNESDrawing() {
 
 // we using return type as int so that we know if game is open or closed.
 int main(void) {
+    SetConfigFlags(FLAG_WINDOW_HIGHDPI); //Tell Windows to handle 125%/150% display scaling properly.
     // Enable Fullscreen Setup and booting everything up.
     InitWindow(800, 600, "Circus Charlie NES"); //InitWindow is a built ni Raylib funcwhich Initializes window and graphics. 800 and 600 are staring ratios for window. Raylib needs an esiting window before it can scan your hardware. That's what it does.
     Image icon = LoadImage("../images/icon.png"); // icon
@@ -80,6 +81,7 @@ int main(void) {
     int monitor = GetCurrentMonitor(); //getting current monitor index number (if using dual monitor or screen it gets index 1 or 2 and stores the corresponding data).
     screenW = GetMonitorWidth(monitor); //getting current monitor width.
     screenH = GetMonitorHeight(monitor); //getting current monitor height.
+    SetWindowPosition(0, 0); //Force window to Top-Left (0, 0) before resizing.
     SetWindowSize(screenW, screenH); //setting our game size to same size as monitor.
     ToggleFullscreen(); //enabling fullscreen.
     SetTargetFPS(60); //locking game on 60 fps so physics run on same speed in every computer.
