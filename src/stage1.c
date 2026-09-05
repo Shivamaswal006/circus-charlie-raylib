@@ -1,5 +1,6 @@
 // --- START OF FILE stage1.c ---
 #include "raylib.h" //Brings in Raylib so we can draw images and play sounds.
+#include "game.h"
 
 extern int highScore; // Pulling the global high score from main.c
 extern int currentScore; //Pulling curentScore global variable from main.c

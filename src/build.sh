@@ -37,7 +37,7 @@ fi
 
 # 2. Compile the Circus Charlie game
 echo "Compiling game binary..."
-gcc main.c -o main -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+gcc main.c stage1.c stage2.c -o main -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
 if [ $? -eq 0 ]; then
     chmod +x main

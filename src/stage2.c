@@ -1,5 +1,6 @@
 // --- START OF FILE stage2.c ---
 #include "raylib.h"
+#include "game.h"
 
 extern int highScore; // Pulling the global high score from main.c
 extern int currentScore; // Pulling currentScore global variable from main.c

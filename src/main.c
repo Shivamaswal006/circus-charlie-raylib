@@ -4,6 +4,8 @@
 // MAIN MENU AND GAME CONTROLLER
 // ==========================================
 #include "raylib.h"
+// --- INCLUDE STAGES ---
+#include "game.h"
 #include <math.h>
 // math.h to use mathematical functions for min and max functions for collision hitboxes.
 
@@ -13,20 +15,6 @@
 // The #define swaps any NES_WIDTH variable to value 426 and NES_HEIGHT variable value to 240 to achieve modern widescreen format.
 #define NES_WIDTH 426
 #define NES_HEIGHT 240
-
-// Audio Struct to hold all our game sounds in one place (much like a folder).
-// GameAudio is a custom datatype, that's why we used typedef (type defination).
-typedef struct {
-    Music stage1;
-    Music stage2;
-    Music gameOver;
-    Sound jump;
-    Sound score;
-    Sound hurt;
-    Sound win;
-} GameAudio; //our custom datatype name.
-// Creating a type definition for a structure containing these 6 sounds, and naming this new type GameAudio.
-// Music and Sound above are built-in Raylib.
 
 GameAudio audio;
 RenderTexture2D target; // The internal canvas we draw the game on before scaling it up.
@@ -40,7 +28,7 @@ int currentScore = 0;
 
 // --- HELPER FUNCTIONS FOR SCALING ---
 // This function starts drawing to our low-resolution internal canvas.
-void BeginNESDrawing() {
+void BeginNESDrawing(void) {
     BeginTextureMode(target); //starts drawing on the virtual canvas we named target above.
     ClearBackground(BLACK); //clears the entire canvas and paints it black.
     //It is important or else each frame will leave old sprites on basically a new frame is pasted on top of old frame instead of a clean canvas.
@@ -48,7 +36,7 @@ void BeginNESDrawing() {
 
 // This function scales the low-res canvas up to your monitor's full size 
 // while perfectly maintaining the 16:9 aspect ratio (preventing stretching/squishing).
-void EndNESDrawing() {
+void EndNESDrawing(void) {
     EndTextureMode(); //ends drawing on the virtual canvas.
     BeginDrawing(); //begins drawing on the acutal monitor.
     ClearBackground(BLACK); //after the canvas is upscaled to 16:9, if your screen doesn't support it, then it leaves glitchy old pixels, using this command we clear it to solid black. This forms the clean backdrop/black bars around your scaled-up game.
@@ -65,10 +53,6 @@ void EndNESDrawing() {
     DrawTexturePro(target.texture, source, dest, (Vector2){ 0, 0 }, 0.0f, WHITE);
     EndDrawing();
 }
-
-// --- INCLUDE STAGES ---
-#include "stage1.c"
-#include "stage2.c"
 
 // we using return type as int so that we know if game is open or closed.
 int main(void) {
